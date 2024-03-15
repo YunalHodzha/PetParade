@@ -1,7 +1,7 @@
 <div id="authenticator">
   <mat-card id="authenticator-content">
     <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
+      <mat-card-title>{{getStateText()}}</mat-card-title>
     </mat-card-header>
     <div *ngIf="isLoginState()">
       <input placeholder="Email" />
@@ -16,9 +16,11 @@
     </div>
     <mat-card-actions align="end">
       <button mat-flat-button
-      (click)="onCreateAccountClick()">Create an Account</button>
+      (click)="onCreateAccountClick()"
+      [disabled]="isRegisterState()">Create an Account</button>
       <button mat-flat-button
-      (click)="onLoginClick()">Login</button>
+      (click)="onLoginClick()"
+      [disabled]="isLoginState()">Login</button>
     </mat-card-actions>
   </mat-card>
 </div>

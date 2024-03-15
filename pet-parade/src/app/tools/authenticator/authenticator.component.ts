@@ -26,6 +26,15 @@ export class AuthenticatorComponent implements OnInit {
   isRegisterState() {
     return this.state == AuthenticatorCompState.REGISTER;
   }
+
+  getStateText() {
+    switch (this.state) {
+      case AuthenticatorCompState.REGISTER:
+        return 'Register';
+      case AuthenticatorCompState.LOGIN:
+        return 'Login';
+    }
+  }
 }
 
 export enum AuthenticatorCompState {
