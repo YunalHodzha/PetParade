@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'pet-parade';
 
   constructor(private loginSheet: MatBottomSheet) {}
+  
   onLoginClick() {
     this.loginSheet.open(AuthenticatorComponent);
   }
