@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatCardModule } from '@angular/material/card';
 import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AuthenticatorComponent],
@@ -23,6 +24,7 @@ import { AuthenticatorComponent } from './tools/authenticator/authenticator.comp
     MatButtonModule,
     MatBottomSheetModule,
     MatCardModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],

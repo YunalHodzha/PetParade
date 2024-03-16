@@ -1,4 +1,4 @@
-/* #nav-bar {
+#nav-bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,4 +33,4 @@
     font-size: 1em;
     display: inline-block;
     cursor: pointer;
-} */
+}
