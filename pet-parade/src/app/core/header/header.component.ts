@@ -10,14 +10,15 @@ import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 export class HeaderComponent {
   auth = new FirebaseTSAuth();
 
-  constructor() {
+  constructor(private router: Router) {
+    
     this.auth.listenToSignInStateChanges((user) => {
       this.auth.checkSignInState({
         whenSignedIn: (user) => {
-          alert('Logged In');
+          // alert('Logged In');
         },
         whenSignedOut: (user) => {
-          alert('Logged Out');
+          // alert('Logged Out');
         },
         whenChanged: (user) => {},
       });
@@ -32,7 +33,5 @@ export class HeaderComponent {
     return this.auth.isSignedIn();
   }
 
-  onLoginClick() {
-    console.log('OnLoginClick!');
-  }
+  
 }

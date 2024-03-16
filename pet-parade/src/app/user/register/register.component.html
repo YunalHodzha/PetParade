@@ -1,0 +1,22 @@
+<div id="register-container">
+  <mat-card id="register-content">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+
+    <div>
+      <input #registerEmail placeholder="Email" />
+      <input #registerPassword placeholder="Password" type="password" />
+      <input
+        #registerConfirmPassword
+        placeholder="Confirm Password"
+        type="password"
+      />
+      <button mat-flat-button color="warn">Create</button>
+    </div>
+    <mat-card-actions align="end" id="login-section">
+      <span>Have an account?</span>
+      <button mat-flat-button color="warn">Login</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

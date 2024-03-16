@@ -1,0 +1,22 @@
+<div id="login-container">
+  <mat-card id="login-content">
+    <mat-card-header>
+      <mat-card-title>login</mat-card-title>
+    </mat-card-header>
+
+    <div>
+      <input #loginEmail placeholder="Email" />
+      <input #loginPassword placeholder="Password" type="password" />
+      <input
+        #loginConfirmPassword
+        placeholder="Confirm Password"
+        type="password"
+      />
+      <button mat-flat-button color="warn">Create</button>
+    </div>
+    <mat-card-actions align="end" id="login-section">
+      <span>Dont have an account?</span>
+      <button mat-flat-button color="warn">Register</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
