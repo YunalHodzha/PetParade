@@ -17,6 +17,24 @@ export class AuthenticatorComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  onLogin(loginEmail: HTMLInputElement, loginPassword: HTMLInputElement) {
+    let email = loginEmail.value;
+    let password = loginPassword.value;
+
+    if (this.isNotEmpty(email) && this.isNotEmpty(password)) {
+      this.firebasetsAuth.signInWith({
+        email: email,
+        password: password,
+        onComplete: (uc) => {
+          alert('Logged In');
+        },
+        onFail: (err) => {
+          alert(err);
+        },
+      });
+    }
+  }
+
   onRegisterClick(
     registerEmail: HTMLInputElement,
     registerPassword: HTMLInputElement,
